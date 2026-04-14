@@ -30,6 +30,23 @@ body {
 a { color: var(--teal); text-decoration: none; }
 a:hover { color: var(--teal-dark); }
 
+/* ── Skip link (a11y) ───────────────────────────────────── */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--teal);
+    color: var(--white);
+    padding: .6rem 1.2rem;
+    border-radius: 0 0 8px 0;
+    z-index: 200;
+    font-weight: 600;
+    font-size: .9rem;
+}
+.skip-link:focus {
+    left: 0;
+}
+
 /* ── Nav ─────────────────────────────────────────────────── */
 .nav {
     position: sticky;
@@ -95,6 +112,35 @@ a:hover { color: var(--teal-dark); }
     transition: background .15s !important;
 }
 .nav-cta:hover { background: var(--teal-dark) !important; color: var(--white) !important; }
+
+/* ── Mobile hamburger ───────────────────────────────────── */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .4rem;
+    margin-left: auto;
+    flex-direction: column;
+    gap: 4px;
+}
+.nav-toggle-bar {
+    display: block;
+    width: 22px;
+    height: 2.5px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: transform .2s, opacity .2s;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
 
 /* ── Hero ─────────────────────────────────────────────────── */
 .hero {
@@ -164,6 +210,14 @@ a:hover { color: var(--teal-dark); }
     border: 1.5px solid var(--border);
 }
 .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+/* ── Focus states (a11y) ─────────────────────────────────── */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+}
 
 /* ── Section shared ──────────────────────────────────────── */
 .section {
@@ -270,7 +324,7 @@ a:hover { color: var(--teal-dark); }
     color: var(--teal);
 }
 .product-link:hover { color: var(--teal-dark); }
-.product-link-arrow::after { content: ' →'; }
+.product-link-arrow::after { content: ' \2192'; }
 
 /* ── About ───────────────────────────────────────────────── */
 .about-grid {
@@ -432,6 +486,36 @@ a:hover { color: var(--teal-dark); }
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .nav-links { display: none; }
+
+    .nav-toggle { display: flex; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem 1.25rem;
+        gap: .75rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    }
+    .nav-links--open {
+        display: flex;
+    }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+        display: block;
+        padding: .5rem 0;
+        font-size: 1rem;
+    }
+    .nav-cta {
+        text-align: center;
+        display: block !important;
+        margin-top: .25rem;
+    }
+
     .footer-inner { flex-direction: column; align-items: flex-start; }
 }

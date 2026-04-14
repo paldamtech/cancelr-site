@@ -4,7 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paldam — Software for Founders</title>
-    <meta name="description" content="Paldam builds focused software tools for independent founders and small SaaS teams. Home of PayDam — automatic failed payment recovery." />
+    <meta name="description" content="Paldam builds focused software tools for independent founders and small SaaS teams. Home of PayDam — automatic failed payment recovery for Stripe." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://paldam.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://paldam.com/" />
+    <meta property="og:title" content="Paldam — Software for Founders" />
+    <meta property="og:description" content="Paldam builds focused software tools for independent founders and small SaaS teams. Home of PayDam — automatic failed payment recovery for Stripe." />
+    <meta property="og:site_name" content="Paldam" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Paldam — Software for Founders" />
+    <meta name="twitter:description" content="Paldam builds focused software tools for independent founders and small SaaS teams. Home of PayDam — automatic failed payment recovery for Stripe." />
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Paldam LLC",
+        "url": "https://paldam.com",
+        "email": "info@paldam.com",
+        "description": "Paldam builds focused software tools for independent founders and small SaaS teams.",
+        "foundingDate": "2026",
+        "sameAs": []
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Paldam",
+        "url": "https://paldam.com"
+    }
+    </script>
+
+    <!-- JSON-LD: SoftwareApplication (PayDam) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PayDam",
+        "url": "https://paydam.app",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Automatic failed Stripe payment recovery. Retries failed invoices and sends timed recovery emails to reduce involuntary churn.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free tier available"
+        }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -13,16 +72,26 @@
 </head>
 <body>
 
+<!-- Skip to content (a11y) -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <!-- ══════════════════════════════════════════════════════════
      NAV
 ══════════════════════════════════════════════════════════ -->
-<header class="nav">
+<header class="nav" role="banner">
     <div class="nav-inner">
-        <a href="/" class="nav-brand">
+        <a href="/" class="nav-brand" aria-label="Paldam home">
             <div class="nav-brand-mark">PL</div>
             Paldam
         </a>
-        <ul class="nav-links">
+
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-menu" role="navigation">
             <li><a href="#products">Products</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -34,6 +103,7 @@
 <!-- ══════════════════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════════════════ -->
+<main id="main">
 <section class="hero">
     <div class="hero-eyebrow">Paldam LLC</div>
     <h1>Software built for<br /><em>independent founders</em></h1>
@@ -64,7 +134,7 @@
             <!-- PayDam -->
             <div class="product-card product-card-live">
                 <span class="product-badge badge-live">Live</span>
-                <img src="https://paydam.app/favicon.png" alt="PayDam" class="product-icon" />
+                <img src="https://paydam.app/favicon.png" alt="PayDam icon" class="product-icon" width="52" height="52" loading="lazy" />
                 <div class="product-name">PayDam</div>
                 <p class="product-desc">
                     Automatic failed Stripe payment recovery. PayDam retries failed
@@ -79,7 +149,7 @@
             <!-- Future product slot -->
             <div class="product-card">
                 <span class="product-badge badge-soon">Coming soon</span>
-                <div class="product-icon-placeholder">⚙️</div>
+                <div class="product-icon-placeholder" aria-hidden="true">&#9881;&#65039;</div>
                 <div class="product-name">Next product</div>
                 <p class="product-desc">
                     Something new is in the works. Follow along — we ship
@@ -114,21 +184,21 @@
 
                 <div class="about-values">
                     <div class="about-value">
-                        <div class="about-value-icon">🎯</div>
+                        <div class="about-value-icon" aria-hidden="true">&#127919;</div>
                         <div class="about-value-text">
                             <strong>One problem per product</strong>
                             <span>We don't build platforms. We build tools that do one thing well and get out of the way.</span>
                         </div>
                     </div>
                     <div class="about-value">
-                        <div class="about-value-icon">⚡</div>
+                        <div class="about-value-icon" aria-hidden="true">&#9889;</div>
                         <div class="about-value-text">
                             <strong>Ship fast, iterate faster</strong>
                             <span>We move quickly and fix things. Imperfect and running beats perfect and vaporware.</span>
                         </div>
                     </div>
                     <div class="about-value">
-                        <div class="about-value-icon">🔒</div>
+                        <div class="about-value-icon" aria-hidden="true">&#128274;</div>
                         <div class="about-value-text">
                             <strong>Privacy by default</strong>
                             <span>We only collect what we need to run the product. No selling data, no dark patterns.</span>
@@ -172,15 +242,16 @@
                 Questions about our products, press inquiries, partnership ideas,
                 or just want to say hi — we read every email.
             </p>
-            <a href="mailto:hello@paldam.com" class="contact-email">hello@paldam.com</a>
+            <a href="mailto:info@paldam.com" class="contact-email">info@paldam.com</a>
         </div>
     </div>
 </section>
+</main>
 
 <!-- ══════════════════════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════════════════════ -->
-<footer class="footer">
+<footer class="footer" role="contentinfo">
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-brand-mark">PL</div>
@@ -189,13 +260,33 @@
 
         <ul class="footer-links">
             <li><a href="https://paydam.app" target="_blank" rel="noopener">PayDam</a></li>
-            <li><a href="/cancelr/privacy.html">Cancelr Privacy</a></li>
-            <li><a href="mailto:hello@paldam.com">Contact</a></li>
+            <li><a href="mailto:info@paldam.com">Contact</a></li>
         </ul>
 
-        <span class="footer-copy">© 2026 Paldam LLC</span>
+        <span class="footer-copy">&copy; 2026 Paldam LLC</span>
     </div>
 </footer>
+
+<script>
+// Mobile nav toggle
+(function() {
+    var btn = document.querySelector('.nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function() {
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('nav-links--open');
+    });
+    // Close menu when a link is clicked
+    menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            btn.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('nav-links--open');
+        });
+    });
+})();
+</script>
 
 </body>
 </html>
