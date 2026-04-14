@@ -442,6 +442,11 @@ button:focus-visible,
     font-weight: 700;
     font-size: .95rem;
 }
+.footer-brand-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
 .footer-links {
     display: flex;
     gap: 1.5rem;
