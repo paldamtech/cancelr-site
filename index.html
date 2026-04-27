@@ -26,11 +26,20 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Paldam LLC",
+        "name": "Paldam",
+        "legalName": "Paldam LLC",
         "url": "https://paldam.com",
         "email": "info@paldam.com",
-        "description": "Paldam builds focused software tools for independent founders and small SaaS teams.",
+        "description": "Paldam LLC is a California limited liability company that builds focused software tools for independent founders and small SaaS teams.",
         "foundingDate": "2026",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2108 N St, Ste N",
+            "addressLocality": "Sacramento",
+            "addressRegion": "CA",
+            "postalCode": "95816",
+            "addressCountry": "US"
+        },
         "sameAs": []
     }
     </script>
@@ -54,12 +63,10 @@
         "url": "https://paydam.app",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "Automatic failed Stripe payment recovery. Retries failed invoices and sends timed recovery emails to reduce involuntary churn.",
+        "description": "Automatic failed Stripe payment recovery for SaaS. PayDam monitors your connected Stripe account for failed invoices and sends a branded recovery email sequence to your customers, while Stripe Smart Retries handles the charge retries — reducing involuntary churn.",
         "offers": {
             "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "description": "Free tier available"
+            "description": "14-day free trial, no credit card required. Monthly subscription tiers (Starter, Pro, Scale) plus a recovery success fee."
         }
     }
     </script>
@@ -137,9 +144,10 @@
                 <img src="https://paydam.app/favicon.png" alt="PayDam icon" class="product-icon" width="52" height="52" loading="lazy" />
                 <div class="product-name">PayDam</div>
                 <p class="product-desc">
-                    Automatic failed Stripe payment recovery. PayDam retries failed
-                    invoices and sends timed recovery emails so you win back revenue
-                    you'd otherwise write off as involuntary churn.
+                    Automatic failed Stripe payment recovery. PayDam monitors your
+                    connected Stripe account for failed invoices and sends a branded
+                    recovery email sequence to your customers — so you win back
+                    revenue you'd otherwise write off as involuntary churn.
                 </p>
                 <a href="https://paydam.app" class="product-link product-link-arrow" target="_blank" rel="noopener">
                     Visit PayDam.app
@@ -173,9 +181,10 @@
                 <div class="section-eyebrow">About</div>
                 <h2 class="section-h2">Small company,<br />deliberate products</h2>
                 <p class="section-body">
-                    Paldam LLC is an independent software company. We're not chasing
-                    venture scale — we're building useful tools, charging fair prices,
-                    and staying profitable without outside funding.
+                    Paldam LLC is an independent software company based in
+                    Sacramento, California. We're not chasing venture scale —
+                    we're building useful tools, charging fair prices, and
+                    staying profitable without outside funding.
                 </p>
                 <p class="section-body" style="margin-top:1rem;">
                     Every product we ship solves a problem we've felt ourselves.
@@ -265,6 +274,9 @@
         </ul>
 
         <span class="footer-copy">&copy; 2026 Paldam LLC</span>
+    </div>
+    <div class="footer-legal">
+        Paldam LLC, a California limited liability company &middot; 2108 N St, Ste N, Sacramento, CA 95816
     </div>
 </footer>
 
